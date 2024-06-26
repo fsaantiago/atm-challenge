@@ -72,3 +72,34 @@ git remote add origin <https://github.com/fsaantiago/atm-challenge>
 ```bash
 git push -u origin master
 ```
+
+### Desafios enfrentados durante a construção da API
+
+- **Configuração Inicial do Ambiente de Desenvolvimento:** Adaptar o ambiente para trabalhar com TypeScript e configurar corretamente o transpilador para JavaScript compatível com o Node.js.
+- **Implementação da Lógica de Saque:** Desenvolver um algoritmo eficiente para calcular a menor quantidade de cédulas necessárias para um valor de saque dado, considerando as denominações disponíveis (100, 50, 20, 10, 5 e 2). E por isso a estrutura possui apenas 3 functions principais:
+  - `index.ts`: function principal para chamada dos cálculos;
+  - `withdrawal.ts`: function com a estrutura de cálculos para saque e retirada das notas e sua quantidade correta;
+  - `withdrawal.tests.ts`: function para testar se a api está funcionando corretamente.
+
+- **Gerenciamento de Erros:** Implementar tratamento adequado para situações em que o valor solicitado não pode ser atendido com as combinações disponíveis de cédulas, retornando mensagens de erro claras e informativas. Um dos exemplos foi a não identificação da porta 5000.
+  - Foi necessário realizar estes passos:
+  ```bash
+  # Comando para encontrar o PID do processo que está usando a porta 5000:
+  lsof -i :5000
+
+  # Ao visualizar a linha que mostra o PID (Process ID) do processo, foi necessário matar este processo com:
+  kill -9 <PID>
+  ```
+- **Testes Automatizados:** Criar e executar testes automatizados utilizando Jest para validar a funcionalidade da API em diferentes cenários, incluindo casos de uso normais e excepcionais.
+
+## Tecnologias utilizadas:
+
+**Ferramentas de Desenvolvimento:** IntelliJ IDEA
+
+**Linguagem:** TypeScript
+
+**Frameworks:** Node.js, Jest e Express
+
+
+  
+

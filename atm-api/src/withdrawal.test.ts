@@ -7,6 +7,7 @@ test('Calculates the minimum amount of notes for a given value', () => {
         20: 1,
         10: 1,
         5: 0,
-        2: 0
+        2: 0,
+        1: 0
     });
 });

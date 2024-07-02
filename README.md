@@ -22,7 +22,8 @@ A API possui um endpoint principal que permite a solicitação de saque. A lógi
   "20": 1,
   "10": 1,
   "5": 0,
-  "2": 0
+  "2": 0,
+  "1": 0
   }
 
 #### Comandos Git para Envio
